@@ -1,0 +1,35 @@
+/packagesjson yarn init 
+//yarn add express
+//import frameworks express vao 
+import express, { response } from 'express';
+import cors from 'cors'
+import rootRoute from './routes/rootRoute.js';
+
+const app = express();
+//chèn middleware
+app.use(express.json());
+
+//khởi tạo sever BE node chạy port 8080
+app.listen(8080);
+
+//khởi động BE node => node index.js
+
+//yarn add cors
+app.use(cors());
+
+//GET => url: localhost:8080/demo\
+//c1: lấy url : lấy từ query string: /demo?id=123&email=demo@example.com
+// và query param" /demo/123/demo@gmail.com
+
+// app.get("/demo", (req,res)=> {
+
+//     //destructuring
+//     // let {id,email} = req.query
+//     // let {id2,email2} = req.params 
+
+//     //c2: lấy từ json
+//     let {id,email,username, phone, sex} = req.body
+//     res.send({id,email,username, phone, sex})
+// });
+
+yarn add sequelize 
